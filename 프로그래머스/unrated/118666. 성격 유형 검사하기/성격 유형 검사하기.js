@@ -29,9 +29,17 @@ function solution(survey, choices) {
     } else if (choices[idx] > 4) {
       record[elem[1]] += (choices[idx] - 4) // 5, 6, 7 이면 각각 1, 2, 3 점을 얻는다. 
     }
+    console.log(record)
   })
 
-  types.forEach(el => result += compare(el[0], el[1]))
+  types.forEach(el => {
+    result += compare(el[0], el[1])
+    console.log(result)
+  })
 
   return result;
 }
+
+// 라이언형(R), 튜브형(T) / 콘형(C), 프로도형(F) / 제이지형(J), 무지형(M) / 어피치형(A), 네오형(N)
+console.log(solution(["AN", "CF", "MJ", "RT", "NA"], [5, 3, 2, 7, 5]))
+console.log(solution(["TR", "RT", "TR"], [7, 1, 3])) // --> R: 6, T: 1
