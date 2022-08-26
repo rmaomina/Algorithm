@@ -12,7 +12,7 @@ function solution(left, right) {
         let divisors = [];
         // i가 4이면 1, 2, 3, 4 // 2까지만 반복하도록 
         for (let j = 1; j <= Math.sqrt(i); j++) { 
-            // 나누어 떨어지면 j는 약수임 4/1, 4/2, 4/4
+            // 나누어 떨어지면 j는 약수임 1, (4), 2
             if (i % j === 0) {
                 divisors.push(j)
                 if (j * j !== i) divisors.push((i/j))
@@ -26,10 +26,7 @@ function solution(left, right) {
             answer -= i
         }
     }
-
+    
+    
     return answer;
 }
-
-// console.log(solution(4, 7))
-console.log(solution(13, 17)) // 13, 14, 15, 16, 17
-console.log(solution(1, 150))
