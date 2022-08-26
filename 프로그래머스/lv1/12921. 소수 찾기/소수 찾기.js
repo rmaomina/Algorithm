@@ -23,4 +23,4 @@ function isPrimeNum(num) { // 2, 3 ... 10
 }
 
 console.log(solution(17)) // --> 2, 3, 5, 7, 11, 13, 17 (7)
-console.log(solution(778)) // --> 
+console.log(solution(778)) // --> ... 137개라고 함.
