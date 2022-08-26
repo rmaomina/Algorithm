@@ -26,7 +26,10 @@ function solution(left, right) {
             answer -= i
         }
     }
-    
-    
+
     return answer;
 }
+
+// console.log(solution(4, 7))
+console.log(solution(13, 17)) // 13, 14, 15, 16, 17
+console.log(solution(1, 150))
