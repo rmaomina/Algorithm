@@ -13,13 +13,15 @@ function solution(progresses, speeds) {
 		let prog = progresses[i]
 
 		// 넘 어렵게 생각하지 말자!
-		// workdays 배열에는 작업에 걸린 시간을 넣는다.
-		let day = 0
+    // 하루는 기본 1일부터 
+		let day = 1 
 		while (true) {
+      // 작업이 100이거나 이상이면 끝난거 
       if (prog >= 100) break
 			prog = prog + speeds[i]
       day += 1
 		}
+    // workdays 배열에는 작업에 걸린 기간을 넣는다.
 		workdays.push(day)
 	}
 	workdays.push(101)
@@ -39,6 +41,8 @@ function solution(progresses, speeds) {
 		}
     return cur
   })
+  
+  // for 문으로 먼저 풀었다가 reduce로 바꿈 
 	// for (let i = 0; i < len; i++) {
 	// 	if (std >= workdays[i + 1]) {
 	// 		release += 1
@@ -54,6 +58,6 @@ function solution(progresses, speeds) {
 
 // 작업하는데 걸리는 날, [8, 4, 10]
 console.log(solution([93, 30, 55, 1], [1, 30, 5, 1])) //[2, 1]
-// console.log(solution([96, 94], [3, 3])) //[2, 1]
+// console.log(solution([96, 94], [3, 3])) 
 // console.log(solution([95, 90, 99, 99, 80, 99], [1, 1, 1, 1, 1, 1]))
 // console.log(solution([99, 99, 99, 90, 90, 90], [1, 1, 1, 1, 1, 1]))
