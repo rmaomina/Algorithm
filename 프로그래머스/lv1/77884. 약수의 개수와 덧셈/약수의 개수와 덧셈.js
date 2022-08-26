@@ -7,29 +7,42 @@ function solution(left, right) {
     // 36이면 약수가 1, 2, 3, 4, 6, 8, 18, 36 
     // Math.sqrt(36) --> 6 까지만 구해보면 나옴. 
 
-    // 먼저 범위를 구함
+    // 희찬님 풀이보고 다시 정리 
+    // sqrt(i)를 제곱한 값이 i와 같다면 약수는 홀수개 << 수학적 접근 
     for (let i = left; i <= right; i++) {
-        let divisors = [];
-        // i가 4이면 1, 2, 3, 4 // 2까지만 반복하도록 
-        for (let j = 1; j <= Math.sqrt(i); j++) { 
-            // 나누어 떨어지면 j는 약수임 4/1, 4/2, 4/4
-            if (i % j === 0) {
-                divisors.push(j)
-                if (j * j !== i) divisors.push((i/j))
-            }
-        }
-        
-        console.log(divisors)
-        if (divisors.length % 2 === 0) {
-            answer += i
-        } else {
-            answer -= i
-        }
+      let sqrt = parseInt(Math.sqrt(i))
+      console.log(sqrt)
+      if (sqrt*sqrt === i) { // 홀수
+        answer -= i
+      } else { // 짝수 
+        answer += i
+      }
     }
+
+
+    // 먼저 범위를 구함
+    // for (let i = left; i <= right; i++) {
+    //     let divisors = [];
+    //     // i가 4이면 1, 2, 3, 4 // 2까지만 반복하도록 
+    //     for (let j = 1; j <= Math.sqrt(i); j++) { 
+    //         // 나누어 떨어지면 j는 약수임 4/1, 4/2, 4/4
+    //         if (i % j === 0) {
+    //             divisors.push(j)
+    //             if (j * j !== i) divisors.push((i/j))
+    //         }
+    //     }
+        
+    //     console.log(divisors)
+    //     if (divisors.length % 2 === 0) {
+    //         answer += i
+    //     } else {
+    //         answer -= i
+    //     }
+    // }
 
     return answer;
 }
 
 // console.log(solution(4, 7))
 console.log(solution(13, 17)) // 13, 14, 15, 16, 17
-console.log(solution(1, 150))
+// console.log(solution(1, 150))
