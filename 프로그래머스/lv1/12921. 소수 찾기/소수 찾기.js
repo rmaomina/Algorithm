@@ -1,8 +1,6 @@
 function solution(n) {
   let prime = 0
 
-  
-  
   for (let i = 2; i <= n; i++) { // 10이라고 하면 2부터 10까지 소수인지 확인해야 함. 
     if (isPrimeNum(i)) prime++
   }
