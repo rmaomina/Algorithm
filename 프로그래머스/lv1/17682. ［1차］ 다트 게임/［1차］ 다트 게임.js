@@ -1,7 +1,7 @@
 function solution(dartResult) {
   
   // "점수|보너스|[옵션]"으로 이루어진 문자열 3세트.
-  // 예) 1S 2D* 3T
+  // 예) [[10,#], '2D*', '3T*'] 
 
   // 문자열 슬라이스로 쪼개기 
   const board = dartResult.match(/[0-9]{1,2}[SDT]{1}[*|#]?/g) // 2D*
@@ -13,7 +13,7 @@ function solution(dartResult) {
   for (let i = 0; i < board.length; i++) {
     let score = board[i].split(/[SDT]{1}/g)[0]
     let option = board[i].split(/[SDT]{1}/g)[1]
-    let bonus = 1 // 'T'인 경우 default
+    let bonus = 1 // 'S'인 경우 default
 
     if (/[D]/.test(board[i])) {
       bonus = 2
@@ -25,7 +25,7 @@ function solution(dartResult) {
     console.log(result)
 
     if (option === '*') { // [2, 4, 6] + *가 나온 경우 
-      for (let j = result.length - 1; j > result.length - 3; j--) {
+      for (let j = result.length - 1; j > result.length - 3; j--) { 
         if (j < 0) continue
         result[j] *= 2
       }
