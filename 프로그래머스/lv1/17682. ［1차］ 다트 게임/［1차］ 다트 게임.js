@@ -37,3 +37,13 @@ function solution(dartResult) {
   return result.reduce((acc, cur) => acc + cur);
 
 }
+
+console.log(solution('1S2D*3T')) // 37 (11 * 2 + 22 * 2 + 33)
+console.log(solution('1D2S#10S')) // 9 (12 + 21 * (-1) + 101)
+console.log(solution('1D2S0T')) // 3 (12 + 21 + 03)
+console.log(solution('1T2D3D#')) // -4 (1**3 + 2**2 + (3**2)-1)
+console.log(solution('1D2S3T*')) // 59 (1**2*2 + 2**1*2 + (3**3)*2)
+
+// console.log(solution('10D10S10T#')) // (100 + 20 + 2000) = 2120
+// console.log(solution('10S1S0S*')) // (10 + 1*2 + 0*2) = 12
+// console.log(solution('0S1S0S*')) // (0 + 2 + 0) = 2
