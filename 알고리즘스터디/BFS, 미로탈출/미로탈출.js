@@ -21,12 +21,16 @@ const bfs = (n, m, board) => {
     
     // 다음 상하좌우로 하나라도 움직일 수 있으면 
     else if ((board[x + 1] !== undefined && board[x + 1][y]) || (board[x - 1] !== undefined && board[x - 1][y]) || board[x][y - 1] || board[x][y + 1]){
+      // 만약 '상'으로 움직일 수 있다면
       if (board[x - 1] !== undefined && board[x - 1][y]) queue.push([x - 1, y]) // 상
+      // 만약 '하'으로 움직일 수 있다면
       if (board[x + 1] !== undefined && board[x + 1][y]) queue.push([x + 1, y]) // 하
+      // 만약 '좌'으로 움직일 수 있다면
       if (board[x][y - 1] !== undefined && board[x][y - 1]) queue.push([x, y - 1]) // 좌
+      // 만약 '우'으로 움직일 수 있다면
       if (board[x][y + 1] !== undefined && board[x][y + 1]) queue.push([x, y + 1]) // 우
     
-      // 하나도 움직일 수 없으면 
+      // 하나도 움직일 수 있는게 없으면  
     } else {
       return -1
     }
