@@ -12,7 +12,7 @@ function solution(lottos, win_nums) {
   const maximumWin = winList[matchNum + unKnownNum] 
   // 모두 0이 나올 경우, 0 + 6 --> 1등
   
-  return [minimumWin, maximumWin]
+  return [maximumWin, minimumWin]
 }
 
 console.log(solution([0, 0, 0, 0, 0, 0], [38, 19, 20, 40, 15, 25]))
