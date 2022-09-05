@@ -1,7 +1,7 @@
 function solution(nums) {
     let answer = 0
-    let memo = []
-    
+
+    // 마지막에서 2번째까지 검사해도 모든 경우의 수를 찾을 수 있다. (합이기에)
     for (let i = 0; i < nums.length - 2; i++) {
         // 1 - 2 - 
         for (let j = i + 1; j < nums.length; j++) {
@@ -23,3 +23,6 @@ function isPrime(num) {
   }
   return num >= 2;
 }
+
+console.log(solution([1, 2, 3, 4]))
+console.log(solution([1, 2, 7, 6, 4]))
