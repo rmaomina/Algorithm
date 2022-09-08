@@ -1,5 +1,5 @@
 function solution(N, number) {
-    // 재료 숫자와 목표 숫자가 같을 경우 1을 return 
+  // 재료 숫자와 목표 숫자가 같을 경우 1을 return 
   if (N === number) return 1
 
   // 숫자를 넣을 dp 공간 [set(0), set(0), ...]
@@ -37,4 +37,9 @@ function solution(N, number) {
   }
 
   return answer
+
 }
+
+console.log(solution(5, 12)) // --> 4
+console.log(solution(2, 11)) // --> 3
+console.log(solution(9, 99)) // --> 2
