@@ -1,0 +1,22 @@
+{
+  "name": "algorithm",
+  "version": "1.0.0",
+  "description": "This is a auto push repository for Baekjoon Online Judge created with [BaekjoonHub](https://github.com/BaekjoonHub/BaekjoonHub).",
+  "main": "pretest.js",
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rmaomina/Algorithm.git"
+  },
+  "author": "MA",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rmaomina/Algorithm/issues"
+  },
+  "homepage": "https://github.com/rmaomina/Algorithm#readme",
+  "dependencies": {
+    "fs": "^0.0.1-security"
+  }
+}
