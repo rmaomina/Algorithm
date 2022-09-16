@@ -1,10 +1,12 @@
-// fs module
-const fs = require('fs')
+// for boj submit
+// const input = require('fs').readFileSync('/dev/stdin').toString().trim()
+// const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n')
 
-// submit
-// const input = fs.readFileSync('/dev/stdin').toString().trim()
-// const input = fs.readFileSync('/dev/stdin').toString().trim().split('\n')
+// for test
+const input = require('fs')
+.readFileSync(__dirname + '/input_boj.txt')
+.toString()
+.trim()
+.split('\n')
 
-// test
-const input = fs.readFileSync(__dirname + '/input_boj.txt').toString()
 console.log(input)
