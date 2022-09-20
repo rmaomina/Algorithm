@@ -143,6 +143,6 @@ dist
 
 # End of https://www.toptal.com/developers/gitignore/api/node
 
-pretest.js
-pretest1.js
+# Custion Gigignore
+pretest*.js
 input_boj.txt
