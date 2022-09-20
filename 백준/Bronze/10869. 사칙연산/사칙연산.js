@@ -1,0 +1,12 @@
+const input = require('fs')
+.readFileSync('/dev/stdin')
+.toString()
+.trim()
+.split(' ')
+
+let arr = input.map(Number)
+console.log(arr[0] + arr[1])
+console.log(arr[0] - arr[1])
+console.log(arr[0] * arr[1])
+console.log(parseInt(arr[0] / arr[1]))
+console.log(arr[0] % arr[1])
