@@ -1,30 +1,33 @@
 function solution(n) {
-  let answer = 0
-  
-  const nQueen = (board, row) => {
-    if(row === n) {
-      answer += 1
-    } else {
-      for (let i = 1; i <= n; i++) {
-        board[row + 1] = i
-        if(checker(board, row + 1)) nQueen(board, row + 1);
-      }
+    let answer = 0;
+    const col = new Array(n + 1).fill(0)
+    
+    const nQueen = (i, col) => {
+        let m = col.length - 1
+        if (promising(i, col)) {
+            if (m === i) {
+                console.log(col.slice(1, col.length))
+            } else {
+                for (let j = 1; j < m + 1; j++) {
+                    col[i + 1] = j
+                    nQueen(i + 1, col)
+                }
+            }
+        } 
     }
-  }
-
-  const checker = (board, row) => {
-    for (let i = 1 ; i < row ; i++) {
-      if (board[i] === board[row]) return false
-      if (Math.abs(board[i] - board[row]) === Math.abs(i - row)) return false
+    
+    const promising = (i, col) => {
+        let k = 1
+        let flag = true
+        while (k < i && flag) {
+            if (col[i] === col[k] || Math.abs(col[i] - col[k]) === i - k) {
+                flag = false
+            }
+        }
+        return flag
     }
-    return true
-  }
-
-  for (let i = 1; i <=n; i++) {
-    let board = new Array(n + 1).fill(0)
-    board[1] = i
-    nQueen(board, 1)
-  }
-  
-  return answer;
+    
+    nQueen(0, col)
+    
+    return answer;
 }
