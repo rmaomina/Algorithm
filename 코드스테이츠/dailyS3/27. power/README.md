@@ -27,9 +27,7 @@
 
 ## **입출력 예시**
 
-```
-1
-2
+```jsx
 let output = power(3, 40);
 console.log(output); // --> 19334827
 ```

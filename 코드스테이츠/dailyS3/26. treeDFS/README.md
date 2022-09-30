@@ -22,7 +22,7 @@
 
 ## **입출력 예시**
 
-```
+```jsx
 let root = new Node(1);
 let rootChild1 = root.addChild(new Node(2));
 let rootChild2 = root.addChild(new Node(3));

@@ -39,7 +39,7 @@
 
 ## **입출력 예시**
 
-```
+```jsx
 let output = bubbleSort([2, 1, 3]);
 console.log(output); // --> [1, 2, 3]
 ```

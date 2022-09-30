@@ -31,7 +31,7 @@
 
 ## **입출력 예시**
 
-```
+```jsx
 let arr1 = [1, 4, 8, 10];
 let arr2 = [2, 3, 5, 9];
 let result = getItemFromTwoSortedArrays(arr1, arr2, 6);

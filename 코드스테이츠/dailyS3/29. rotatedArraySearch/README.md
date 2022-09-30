@@ -29,7 +29,7 @@
 
 ## **입출력 예시**
 
-```
+```jsx
 let output = rotatedArraySearch([4, 5, 6, 0, 1, 2, 3], 2);
 console.log(output); // --> 5
 

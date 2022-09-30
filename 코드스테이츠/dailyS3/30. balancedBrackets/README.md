@@ -27,7 +27,7 @@
 
 ## **입출력 예시**
 
-```
+```jsx
 let output = balancedBrackets('(');
 console.log(output); // // -> false
 
@@ -39,7 +39,7 @@ console.log(output); // --> true
 
 - 모든 종류의 괄호(`(, ), {, }, [, ]`)가 포함된 문자열을 입력빋아 모든 괄호의 짝이 맞는지 여부를 리턴해 보세요.
 
-```
+```jsx
 let output = balancedBrackets('[](){}');
 console.log(output); // --> true
 
