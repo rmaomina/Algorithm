@@ -1,5 +1,6 @@
-// const path = __dirname + '/input_boj.txt'
-const path = '/dev/stdin'
+
+const path = __dirname + '/input_boj.txt'
+// const path = '/dev/stdin'
 
 const input = require('fs').readFileSync(path).toString().trim().split('\n')
 
@@ -17,6 +18,9 @@ const minHeap = (array, size) => {
 	for (let i = Math.floor(size / 2) - 1; i >= 0; i--) {
 		heapify(array, size, i)
 	}
+
+	console.log('최소힙 배열')
+	console.log(arr)
 
 	for (let j = size - 1; j > 0; j--) {
 		temp = array[0]
@@ -48,8 +52,13 @@ const heapify = (array, size, root) => {
 	}
 }
 
+console.log('정렬 전 배열')
+console.log(arr)
 
 minHeap(arr, len)
+console.log('정렬 후 배열')
+console.log(arr)
+console.log(result)
 
 let answer = result[k - 1] ? result[k - 1].join(' ') : -1
 console.log(answer)
