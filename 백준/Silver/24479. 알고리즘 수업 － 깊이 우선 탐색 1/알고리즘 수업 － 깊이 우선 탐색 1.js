@@ -1,5 +1,9 @@
+
+const path = __dirname + "/input_boj.txt";
+// const path = '/dev/stdin'
+
 const input = require('fs')
-.readFileSync('/dev/stdin')
+.readFileSync(path)
 .toString()
 .trim()
 .split('\n')
@@ -24,7 +28,7 @@ const dfs = ((R) => {
     answer[R - 1] = count++
     if (!graph.has(R)) return
     const nodes = [...graph.get(R)].sort((a, b) => a - b)
-    for (node of nodes) {
+    for (let node of nodes) {
         if (!visited[node]) {
             dfs(node)
         }
