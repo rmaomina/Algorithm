@@ -1,12 +1,13 @@
-// for boj submit
-// const input = require('fs').readFileSync('/dev/stdin').toString().trim()
-// const input = require('fs').readFileSync('/dev/stdin').toString().trim().split('\n')
+const path = __dirname + "/input_boj.txt";
+// const path = '/dev/stdin'
 
-// for test
 const input = require('fs')
-.readFileSync(__dirname + '/input_boj.txt')
+.readFileSync(path)
 .toString()
 .trim()
 .split('\n')
 
-console.log(input)
+let [first, ...nodes] = input
+
+
+console.log('')
