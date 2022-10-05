@@ -145,4 +145,4 @@ dist
 
 # Custion Gigignore
 pretest*.js
-input_boj.txt
+input_boj*.txt
