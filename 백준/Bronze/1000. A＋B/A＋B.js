@@ -1,5 +1,8 @@
+const path = __dirname + "/input_boj.txt";
+// const path = '/dev/stdin'
+
 const input = require('fs')
-.readFileSync('/dev/stdin')
+.readFileSync(path)
 .toString()
 .trim()
 .split(' ')
