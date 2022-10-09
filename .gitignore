@@ -146,3 +146,4 @@ dist
 # Custion Gigignore
 pretest*.js
 input_boj*.txt
+.vscode/
