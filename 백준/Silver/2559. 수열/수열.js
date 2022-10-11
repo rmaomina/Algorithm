@@ -1,6 +1,6 @@
 // 수열 연속적인 k일의 최대 온도합 구하기 
-// const path = __dirname + '/input_boj1.txt'
-const path = '/dev/stdin'
+const path = __dirname + '/input_boj1.txt'
+// const path = '/dev/stdin'
 
 const input = require('fs').readFileSync(path).toString().trim().split('\n')
 
