@@ -1,5 +1,5 @@
-const path = __dirname + "/input_boj1.txt"
-// const path = '/dev/stdin'
+// const path = __dirname + "/input_boj1.txt"
+const path = '/dev/stdin'
 
 const input = require("fs").readFileSync(path).toString().trim().split("\n")
 
@@ -67,13 +67,13 @@ for (let i = 0; i < arr.length; i++) {
 		maxHeap.insertItem(arr[i])
 	} else {
 		if (maxHeap.heap.length === 0) {
-      result += "0\n"
+      result += "0" + "\n"
     }
 		else {
       let item = maxHeap.deleteItem()
-			result += `${item}\n`
+			result += item + "\n"
 		}
 	}
 }
 
-console.log(result)
+console.log(result.trim())
