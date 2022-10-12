@@ -1,5 +1,6 @@
-// const path = __dirname + '/input_boj.txt'
-const path = '/dev/stdin'
+
+const path = __dirname + '/input_boj.txt'
+// const path = '/dev/stdin'
 
 const input = require('fs').readFileSync(path).toString().trim().split('\n')
 const [testCase, ...info] = input
@@ -21,6 +22,7 @@ while (info.length > 0) {
     needVisit.push([row, col])
   }
 
+  console.table(farm)
   const dfs = (r, c) => {
     if (!farm[r][c] || farm[r][c] === -1) return
     // 방문 처리 
@@ -44,6 +46,7 @@ while (info.length > 0) {
       answer++
     }
   }
+  console.table(farm)
   result += answer + '\n'
 }
 
