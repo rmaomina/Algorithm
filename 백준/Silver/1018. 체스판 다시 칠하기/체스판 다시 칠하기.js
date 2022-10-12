@@ -11,14 +11,17 @@ const boardTemp1 = Array.from({ length: 8 }, (v, i) => {
 	if (i % 2 === 0) color = 'BW'
 	else color = 'WB'
 	return color.repeat(4)
-}).map(el => el.split(''))
+})
 
 const boardTemp2 = Array.from({ length: 8 }, (v, i) => {
 	let color = ''
 	if (i % 2 === 0) color = 'WB'
 	else color = 'BW'
 	return color.repeat(4)
-}).map(el => el.split(''))
+})
+
+// console.table(boardTemp1)
+// console.table(boardTemp2)
 
 function checkTemplete(n, m, boardType) {
 	// 행과 열의 첫번째 좌표 여기서부터 8*8을 템플릿과 비교
@@ -29,6 +32,8 @@ function checkTemplete(n, m, boardType) {
 			if (chessBoard[i][j] !== boardType[i - n][j - m]) count1++ // 0, 0 ~ 8, 8 
 		}
 	}
+
+  // console.log(count1)
 	return count1
 }
 
