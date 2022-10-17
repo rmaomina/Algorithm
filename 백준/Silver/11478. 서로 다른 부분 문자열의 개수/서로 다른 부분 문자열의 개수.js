@@ -9,9 +9,8 @@ let result = new Set()
 
 for (let i = 0; i < str.length; i++) {
 	for (let j = i; j < str.length; j++) {
-    let subStr = str.substring(i, j + 1)
-    // console.log(subStr)
-	result.add(subStr)
+    let subStr = str.slice(i, j + 1)
+		result.add(subStr)
 	}
 }
 
