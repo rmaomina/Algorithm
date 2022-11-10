@@ -148,3 +148,4 @@ pretest*.js
 input_boj*.txt
 .vscode/
 코드스테이츠/
+snippet_boj.js
