@@ -14,7 +14,7 @@ function solution(n, m) {
     return gcd(b, a % b)
   }
 
-  // 최소공배수 
+  // [최대공약수, 최소공배수]
   return [gcd(n, m), n * m / gcd(n, m)]
 }
 
